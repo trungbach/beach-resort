@@ -17,7 +17,7 @@ class SingleRoom extends Component {
         return ( 
             room ? (
                 <>
-                    <StyledHero img={room.images[0].fields.file.url}>
+                    <StyledHero img={room.images[0]}>
                         <Banner title={`${room.name} room`}>
                             <Link to="/rooms" className="btn-primary">
                                 back to rooms
@@ -29,7 +29,7 @@ class SingleRoom extends Component {
                             {room.images.map((item, index) => {
                                 if(index > 0)
                                     return (
-                                        <img key={index} src={item.fields.file.url} alt={room.name} /> 
+                                        <img key={index} src={item} alt={room.name} /> 
                                     )
                             })}
                         </div>

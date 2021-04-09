@@ -28,10 +28,11 @@ class RoomList extends Component {
         if(filter.breakfast) {
             rooms = rooms.filter(room => room.breakfast);
         }
-
+        console.log(rooms);
         if(rooms.length > 0) {
             rooms = rooms.map(room => <Room room={room}/>)
         } 
+        else rooms = 'Sorry! No rooms matched';
         return (
             <div className='roomslist'>
                 <div className="roomslist-center">
