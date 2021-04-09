@@ -62,7 +62,7 @@ class SearchRoom extends Component {
             <option>{capacity}</option>
         ));
         maxPrice = Math.max(...getUnique(rooms, 'price'));
-        maxSize = Math.max(...getUnique(rooms, 'size'));
+        // maxSize = Math.max(...getUnique(rooms, 'size'));
 
         return (
             <div className='filter-container'>
