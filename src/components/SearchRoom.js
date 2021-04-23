@@ -30,11 +30,10 @@ class SearchRoom extends Component {
         const target = e.target;
         const name = target.name;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        console.log(target.checked);
         this.setState({
             [name]: value
         });
-        this.props.filterRoom(this.props.rooms, {[name]: value});
+        this.props.filterRoom({[name]: value});
     }
 
     render() {
@@ -152,8 +151,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        filterRoom: (rooms, filter) => {
-            dispatch(actions.filterRoom(rooms, filter));
+        filterRoom: (filter) => {
+            dispatch(actions.filterRoom(filter));
         }
     }
 }

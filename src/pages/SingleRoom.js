@@ -27,9 +27,8 @@ class SingleRoom extends Component {
                     <div className='single-room'>
                         <div className="single-room-images">
                             {room.images.map((item, index) => {
-                                if(index > 0)
                                     return (
-                                        <img key={index} src={item} alt={room.name} /> 
+                                        index > 0 && <img key={index} src={item} alt={room.name} /> 
                                     )
                             })}
                         </div>

@@ -7,7 +7,9 @@ function Hero({children, hero}) {
         </header>
     )
 }
+
 Hero.defaultProps = {
     hero: "defaultHero"
 }
+
 export default Hero;

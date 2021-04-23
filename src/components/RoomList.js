@@ -10,6 +10,7 @@ class RoomList extends Component {
 
     render() {
         let { rooms, filter } = this.props;
+        console.log(filter);
         // filter room
         if(filter.type !== 'all') {
             rooms = rooms.filter(room => room.type === filter.type);
@@ -28,11 +29,10 @@ class RoomList extends Component {
         if(filter.breakfast) {
             rooms = rooms.filter(room => room.breakfast);
         }
-        console.log(rooms);
         if(rooms.length > 0) {
             rooms = rooms.map(room => <Room room={room}/>)
-        } 
-        else rooms = 'Sorry! No rooms matched';
+        } else rooms = 'Sorry! No rooms matched';
+
         return (
             <div className='roomslist'>
                 <div className="roomslist-center">

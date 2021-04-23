@@ -14,10 +14,9 @@ export const fetchRooms = (rooms) => {
     }
 }
 
-export const filterRoom = (rooms, filter) => {
+export const filterRoom = (filter) => {
     return {
         type: Types.FILTER_ROOMS,
-        rooms,
         filter
     }
 }

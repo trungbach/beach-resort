@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Title from './Title';
 import {FaCocktail, FaHiking, FaShuttleVan, FaBeer} from 'react-icons/fa';
+
 export default class Services extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -29,6 +31,7 @@ export default class Services extends Component {
             ]
         }
     }
+
     render() {
         let services = this.state.services.map((item, index) => 
             <div key={index} className='service'>
@@ -36,6 +39,7 @@ export default class Services extends Component {
                 <h6>{item.title}</h6>
                 <p>{item.info}</p>
             </div>);
+
         return (
             <div className='services'>   
                 <Title title='services' />

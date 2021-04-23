@@ -13,11 +13,9 @@ const initialState = {
 }
 
 var myReducer = (state = initialState, action) => {
-    // let newState = {...state};
     switch(action.type) {
         case Types.FILTER_ROOMS:
             let newState = {...state,...action.filter};
-            console.log(action.filter);
             return newState;
         default: return {...state};    
     }

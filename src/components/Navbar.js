@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FaAlignRight} from 'react-icons/fa';
 import logo from '../images/logo.svg';
 import {Link} from 'react-router-dom';
+
 class Navbar extends Component {
     constructor(props) {
         super(props);
